@@ -1,4 +1,4 @@
 bicycles = ["trek", "cannondale", "redline", "specialized"]
 
-print(bicycles)
-print(", ".join(bicycles))
+print(bicycles[0])
+print(bicycles[-1])
