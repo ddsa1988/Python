@@ -18,3 +18,11 @@ motorcycles.remove("triumph")
 del motorcycles[0]
 print(motorcycles)
 print()
+
+poppedMotorcycle = motorcycles.pop()
+print(poppedMotorcycle)
+print(motorcycles)
+print()
+
+motorcycles.pop(0)
+print(motorcycles)
