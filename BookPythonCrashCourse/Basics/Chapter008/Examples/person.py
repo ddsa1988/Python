@@ -1,0 +1,23 @@
+from datetime import date
+
+
+def build_person(first_name: str, last_name: str, birthdate: date = None) -> dict:
+    person = {}
+
+    if (first_name.strip() == 0 or last_name.strip() == 0):
+        return {}
+
+    person["first_name"] = first_name.title()
+    person["last_name"] = last_name.title()
+
+    if (type(birthdate) == date):
+        person["birthdate"] = birthdate
+
+    return person
+
+
+person1 = build_person("diego", "alexandre")
+person2 = build_person("diego", "alexandre", date(1988, 1, 22))
+
+print(f"{person1}\n")
+print(f"{person2}\n")
