@@ -64,12 +64,12 @@ def main():
                 number_songs = int(user_input)
 
                 if (number_songs <= 0):
-                    raise ValueError("Invalid number.")
+                    raise ValueError()
 
                 break
 
             except ValueError as e:
-                print(e)
+                print("Invalid number.")
 
         if (is_active):
             new_album = make_album(artist_name, album_title, number_songs)
