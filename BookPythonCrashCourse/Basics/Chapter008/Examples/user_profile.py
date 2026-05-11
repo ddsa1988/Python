@@ -1,4 +1,4 @@
-def build_profile(first_name: str, last_name: str, **user_profile: dict[str, str]) -> dict[str, str]:
+def build_profile(first_name: str, last_name: str, **user_profile: dict[str, str]) -> dict:
     if (len(first_name.strip()) == 0 or len(last_name.strip()) == 0):
         return user_profile
 
@@ -8,7 +8,7 @@ def build_profile(first_name: str, last_name: str, **user_profile: dict[str, str
     return user_profile
 
 
-my_profile = build_profile(
-    "diego", "alexander", birthdate="1988-1-22", country="Brazil")
+user_profile = build_profile(
+    'albert', 'einstein', location='princeton', field='physics')
 
-print(my_profile)
+print(user_profile)
