@@ -1,7 +1,7 @@
 from datetime import date
 
 
-def build_person(first_name: str, last_name: str, birthdate: date = None) -> dict:
+def build_person(first_name: str, last_name: str, birthdate: date = None) -> dict[str, str]:
     person = {}
 
     if (first_name.strip() == 0 or last_name.strip() == 0):
@@ -11,7 +11,7 @@ def build_person(first_name: str, last_name: str, birthdate: date = None) -> dic
     person["last_name"] = last_name.title()
 
     if (type(birthdate) == date):
-        person["birthdate"] = birthdate
+        person["birthdate"] = str(birthdate)
 
     return person
 

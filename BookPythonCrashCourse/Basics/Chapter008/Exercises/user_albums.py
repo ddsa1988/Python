@@ -1,4 +1,4 @@
-def make_album(artist_name: str, album_title: str, number_songs: int = 0):
+def make_album(artist_name: str, album_title: str, number_songs: int = 0) -> dict[str, str]:
     album = {}
 
     if (len(artist_name.strip()) <= 0 or len(album_title.strip()) <= 0):
@@ -8,7 +8,7 @@ def make_album(artist_name: str, album_title: str, number_songs: int = 0):
     album['album_title'] = album_title.strip().title()
 
     if (number_songs > 0):
-        album["number_songs"] = number_songs
+        album["number_songs"] = str(number_songs)
 
     return album
 
