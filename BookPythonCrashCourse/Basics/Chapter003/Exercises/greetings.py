@@ -2,7 +2,7 @@ def greeting(name: str) -> str:
     return f"Good morning {name}. How are doing?"
 
 
-names = ["Diego", "Amanda", "Amora", "Ameixa"]
+names: list[str] = ["Diego", "Amanda", "Amora", "Ameixa"]
 
 
 print(greeting(names[0]))

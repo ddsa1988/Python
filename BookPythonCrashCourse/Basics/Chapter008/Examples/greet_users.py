@@ -4,6 +4,6 @@ def greet_users(names: list[str]) -> None:
         print(msg)
 
 
-user_names = ["hannah", "ty", "margot"]
+user_names: list[str] = ["hannah", "ty", "margot"]
 
 greet_users(user_names)

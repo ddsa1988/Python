@@ -1,7 +1,7 @@
-sandwich_orders = ["grilled cheese", "pastrami", "club",
-                   "chicken", "ham", "pastrami", "avocado toast", "salmon bagel", "pastrami"]
+sandwich_orders: list[str] = ["grilled cheese", "pastrami", "club",
+                              "chicken", "ham", "pastrami", "avocado toast", "salmon bagel", "pastrami"]
 
-sandwich_excluded = "pastrami"
+sandwich_excluded: str = "pastrami"
 
 print(f"{sandwich_orders}\n")
 

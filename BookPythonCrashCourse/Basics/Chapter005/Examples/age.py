@@ -1,4 +1,4 @@
-age = 20
+age: int = 20
 
 if (age > 18 and age < 80):
     print("Good")

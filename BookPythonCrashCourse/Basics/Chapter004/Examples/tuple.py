@@ -1,6 +1,6 @@
 # Tuples cannot change the items values
 
-names = ("diego", "amanda", "eduarda")
+names: tuple[str] = ("diego", "amanda", "eduarda")
 print(names)
 
 print()

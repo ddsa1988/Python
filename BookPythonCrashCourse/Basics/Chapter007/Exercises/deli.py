@@ -1,7 +1,7 @@
 sandwich_orders = ["grilled cheese", "club",
                    "chicken", "ham", "avocado toast", "salmon bagel"]
 
-finished_sandwiches = []
+finished_sandwiches: list[str] = []
 
 while (len(sandwich_orders) > 0):
     sandwich = sandwich_orders.pop()

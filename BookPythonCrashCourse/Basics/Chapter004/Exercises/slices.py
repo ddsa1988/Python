@@ -1,4 +1,4 @@
-odd_numbers = list(range(1, 30, 2))
+odd_numbers: list[int] = list(range(1, 30, 2))
 
 print(odd_numbers)
 
@@ -7,7 +7,7 @@ print("\nThe first three items are:", end=" ")
 for number in odd_numbers[:3]:
     print(number, end=" ")
 
-middle_index = len(odd_numbers) // 2
+middle_index: int = len(odd_numbers) // 2
 
 print("\n\nThree items from the middle:", end=" ")
 

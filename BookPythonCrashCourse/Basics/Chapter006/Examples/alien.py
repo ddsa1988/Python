@@ -1,4 +1,4 @@
-alien_0 = {"color": "green", "points": 5}
+alien_0: dict[str, any] = {"color": "green", "points": 5}
 
 print(f"{alien_0}\n")
 

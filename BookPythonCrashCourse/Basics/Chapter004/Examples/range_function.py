@@ -8,11 +8,11 @@ for value in range(0, 11, 2):
 
 print("\n")
 
-numbers = list(range(100, 120, 4))
+numbers: list[int] = list(range(100, 120, 4))
 print(numbers)
 print()
 
-magicians = ["alice", "david", "carolina"]
+magicians: list[str] = ["alice", "david", "carolina"]
 
 print("Magicians names: ", end=" ")
 

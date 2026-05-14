@@ -3,17 +3,18 @@
 # "Would you like to let another person respond? (yes/ no)
 # Poll Results
 
-results = {}
-is_poll_active = True
+results: dict[str, str] = {}
+is_poll_active: bool = True
 
 while (is_poll_active):
-    user_name = input("What is your name? ")
+    user_name: str = input("What is your name? ")
 
     if (len(user_name.strip()) < 1):
         print("Invalid name.")
         continue
 
-    user_response = input("Which mountain would you like to climb someday? ")
+    user_response: str = input(
+        "Which mountain would you like to climb someday? ")
 
     if (len(user_response.strip()) < 1):
         print("Invalid response.")
@@ -21,7 +22,8 @@ while (is_poll_active):
 
     results[user_name.lower()] = user_response.lower()
 
-    quit = input("Would you like to let another person respond? (yes/no) ")
+    quit: str = input(
+        "Would you like to let another person respond? (yes/no) ")
 
     if (len(quit.strip()) > 0 and quit.lower() == "no"):
         break

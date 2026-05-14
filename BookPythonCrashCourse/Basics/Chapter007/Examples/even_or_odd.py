@@ -1,7 +1,8 @@
-user_input = input("Enter a number, and I'll tell you if it's even or odd: ")
+user_input: str = input(
+    "Enter a number, and I'll tell you if it's even or odd: ")
 
 try:
-    number = int(user_input)
+    number: int = int(user_input)
 
     if (number % 2 == 0):
         print(f"The number {number} is even.")

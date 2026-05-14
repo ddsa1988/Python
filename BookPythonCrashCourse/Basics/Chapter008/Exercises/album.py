@@ -1,5 +1,5 @@
 def make_album(artist_name: str, album_title: str, number_songs: int = 0):
-    album = {}
+    album: dict[str, any] = {}
 
     if (len(artist_name.strip()) <= 0 or len(album_title.strip()) <= 0):
         return album

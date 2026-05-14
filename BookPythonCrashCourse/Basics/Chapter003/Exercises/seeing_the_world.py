@@ -1,5 +1,5 @@
-places_to_visit = ["Spain", "Portugal", "China", "Italy", "Africa", "Norway",
-                   "Iceland", "Atacama"]
+places_to_visit: list[str] = ["Spain", "Portugal", "China", "Italy", "Africa", "Norway",
+                              "Iceland", "Atacama"]
 
 print(f"Original list: [{", ".join(places_to_visit)}]")
 print()

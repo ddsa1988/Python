@@ -8,7 +8,7 @@ def build_profile(first_name: str, last_name: str, **user_profile: dict[str, str
     return user_profile
 
 
-my_profile = build_profile(
+my_profile: dict[str, str] = build_profile(
     "diego", "alexander", birthdate="1988-1-22", country="Brazil")
 
 print(my_profile)

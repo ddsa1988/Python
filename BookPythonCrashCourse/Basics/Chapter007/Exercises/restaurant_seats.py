@@ -1,7 +1,7 @@
-user_input = input("How many people are in your dinner group? ")
+user_input: str = input("How many people are in your dinner group? ")
 
 try:
-    guests_number = int(user_input)
+    guests_number: int = int(user_input)
 
     if (guests_number > 8):
         print("Your group have to wait for a table.")

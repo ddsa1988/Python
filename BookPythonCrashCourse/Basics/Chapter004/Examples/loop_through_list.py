@@ -1,4 +1,4 @@
-magicians = ["alice", "david", "carolina"]
+magicians: list[str] = ["alice", "david", "carolina"]
 
 print("Magicians names: ", end=" ")
 

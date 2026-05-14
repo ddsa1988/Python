@@ -9,7 +9,7 @@ def send_messages(messages: list[str], sent_messages: list[str]) -> None:
         print(message)
 
 
-messages = ["Message 1", "Message 2", "Message 3"]
+messages: list[str] = ["Message 1", "Message 2", "Message 3"]
 sent_messages = []
 
 send_messages(messages, sent_messages)

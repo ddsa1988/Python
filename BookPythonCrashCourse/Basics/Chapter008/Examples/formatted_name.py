@@ -1,6 +1,6 @@
 def get_formatted_name(first_name: str, last_name: str, middle_name: str = "") -> str:
 
-    full_name = ""
+    full_name: str = ""
 
     if (len(middle_name.strip()) > 0):
         full_name = f"{first_name} {middle_name} {last_name}"

@@ -1,4 +1,4 @@
-guest_list = ["Diego", "Amanda", "Amora", "Ameixa"]
+guest_list: list[str] = ["Diego", "Amanda", "Amora", "Ameixa"]
 print(guest_list)
 print()
 

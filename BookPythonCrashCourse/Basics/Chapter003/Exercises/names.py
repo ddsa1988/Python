@@ -1,4 +1,4 @@
-names = ["Diego", "Amanda", "Amora", "Ameixa"]
+names: list[str] = ["Diego", "Amanda", "Amora", "Ameixa"]
 
 print(names[0])
 print(names[1])

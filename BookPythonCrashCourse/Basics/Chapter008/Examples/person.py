@@ -16,8 +16,8 @@ def build_person(first_name: str, last_name: str, birthdate: date = None) -> dic
     return person
 
 
-person1 = build_person("diego", "alexandre")
-person2 = build_person("diego", "alexandre", date(1988, 1, 22))
+person1: dict[str, str] = build_person("diego", "alexandre")
+person2: dict[str, str] = build_person("diego", "alexandre", date(1988, 1, 22))
 
 print(f"{person1}\n")
 print(f"{person2}\n")

@@ -7,7 +7,7 @@ def dinner_invite(names: list) -> None:
             f"Good morning, {name}. How are you? I would like to invite you for dinner tomorrow at my house.")
 
 
-guest_list = ["Diego", "Amanda", "Amora", "Ameixa"]
+guest_list: list[str] = ["Diego", "Amanda", "Amora", "Ameixa"]
 print(guest_list)
 print()
 

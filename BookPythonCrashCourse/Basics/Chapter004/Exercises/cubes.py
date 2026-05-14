@@ -1,4 +1,4 @@
-cubes = list()
+cubes: list[int] = list()
 
 for value in range(1, 11):
     cubes.append(value**3)

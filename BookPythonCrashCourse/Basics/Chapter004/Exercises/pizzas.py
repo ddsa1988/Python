@@ -1,4 +1,4 @@
-pizzas = ["margarita", "pepperoni", "portuguese"]
+pizzas: list[str] = ["margarita", "pepperoni", "portuguese"]
 
 for pizza in pizzas:
     print(f"I like {pizza} pizza.")

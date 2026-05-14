@@ -1,4 +1,4 @@
-pizza = {
+pizza: dict[str, any] = {
     "crust": "thin",
     "toppings": ["mushrooms", "cheese"]
 }

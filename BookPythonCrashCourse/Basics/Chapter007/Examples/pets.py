@@ -1,5 +1,5 @@
-pets = ["dog", "cat", "dog", "goldfish", "cat", "rabbit", "cat"]
-pet_to_be_removed = "cat"
+pets: list[str] = ["dog", "cat", "dog", "goldfish", "cat", "rabbit", "cat"]
+pet_to_be_removed: str = "cat"
 
 print(f"{pets}\n")
 

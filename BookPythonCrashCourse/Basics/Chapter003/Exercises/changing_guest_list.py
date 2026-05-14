@@ -1,9 +1,9 @@
-guest_list = ["Diego", "Amanda", "Amora", "Ameixa"]
+guest_list: list[str] = ["Diego", "Amanda", "Amora", "Ameixa"]
 print(guest_list)
 print()
 
-guest_who_cant_come = "Amora"
-new_guest = "Ivanice"
+guest_who_cant_come: str = "Amora"
+new_guest: str = "Ivanice"
 
 if guest_who_cant_come in guest_list:
     index = guest_list.index(guest_who_cant_come)

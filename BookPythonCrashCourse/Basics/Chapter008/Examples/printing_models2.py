@@ -13,8 +13,8 @@ def show_completed_models(completed_models: list[str]) -> None:
         print(completed_model)
 
 
-unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
-completed_models = []
+unprinted_designs: list[str] = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models: list[str] = []
 
 print_models(unprinted_designs[:], completed_models)
 show_completed_models(completed_models)

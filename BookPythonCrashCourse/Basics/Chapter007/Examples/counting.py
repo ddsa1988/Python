@@ -1,6 +1,6 @@
-counter = 0
-max_count = 20
-is_active = True
+counter: int = 0
+max_count: int = 20
+is_active: bool = True
 
 while (is_active):
     counter += 1

@@ -1,10 +1,11 @@
-is_active = True
+is_active: bool = True
 
 print("***** Welcome to the movie tickets ****\n")
 
 while (is_active):
-    user_age = 0
-    user_input = input("How old are you? Type your age or 'quit' to exit: ")
+    user_age: int = 0
+    user_input: str = input(
+        "How old are you? Type your age or 'quit' to exit: ")
 
     if (user_input.lower().strip() == "quit"):
         break

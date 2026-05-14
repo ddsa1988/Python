@@ -1,4 +1,4 @@
-users = {
+users: dict[str, dict[str, str]] = {
     "diego": {
         "first_name": "diego",
         "last_name": "alexander",

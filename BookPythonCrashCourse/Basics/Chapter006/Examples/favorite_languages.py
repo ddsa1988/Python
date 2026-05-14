@@ -1,4 +1,4 @@
-favorite_languages = {
+favorite_languages: dict[str, str] = {
     "jen": "python",
     "sarah": "c",
     "edward": "rust",
@@ -7,5 +7,5 @@ favorite_languages = {
 
 print(f"{favorite_languages}\n")
 
-favorite_language = favorite_languages.get("diego")
+favorite_language: str = favorite_languages.get("diego")
 print(favorite_language)

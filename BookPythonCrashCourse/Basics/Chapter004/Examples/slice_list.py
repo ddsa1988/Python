@@ -1,7 +1,7 @@
 # Slice => [start, stop, step]
 
-players = ["charles", "martina", "michael", "florence", "eli"]
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+players: list[str] = ["charles", "martina", "michael", "florence", "eli"]
+numbers: list[int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 print(players[1:3])
 print(players[:3])

@@ -5,6 +5,6 @@ def show_messages(messages: list[str]) -> None:
         print(message)
 
 
-messages = ["Message 1", "Message 2", "Message 3"]
+messages: list[str] = ["Message 1", "Message 2", "Message 3"]
 
 show_messages(messages)

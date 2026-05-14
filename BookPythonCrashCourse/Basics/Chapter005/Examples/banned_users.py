@@ -1,6 +1,6 @@
-banned_users = ["andrew", "carolina", "david"]
+banned_users: list[str] = ["andrew", "carolina", "david"]
 
-user = "carolina"
+user: str = "carolina"
 
 if (user in banned_users):
     print(f"{user}. You're banned.")

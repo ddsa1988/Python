@@ -5,8 +5,8 @@ def cancel_dinner_msg(name: str) -> None:
     print(f"I'll have to cancel our dinner {name}. I'm sorry.")
 
 
-guest_list = ["Diego", "Amanda", "Amora", "Ameixa",
-              "Ivanice", "Tainara", "Rodrigo", "Mireli"]
+guest_list: list[str] = ["Diego", "Amanda", "Amora", "Ameixa",
+                         "Ivanice", "Tainara", "Rodrigo", "Mireli"]
 
 print(guest_list)
 print()
