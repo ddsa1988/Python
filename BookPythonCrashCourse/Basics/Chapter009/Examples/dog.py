@@ -13,3 +13,18 @@ class Dog:
     def roll_over(self):
         """Simulate  a dog rolling over in response to a command"""
         print(f"{self.name} rolled over")
+
+    def __eq__(self, other: Dog):
+        """Compare if two dog objects are equals"""
+        if not isinstance(other, Dog):
+            return NotImplemented
+
+        return self.name == other.name and self.age == other.age
+
+    def __str__(self):
+        """Object user-friendly representation"""
+        return f"{self.name} is {self.age} years old."
+
+    def __repr__(self):
+        """Object unambiguous representation that mimics the constructor"""
+        return f"Dog(name = {self.name}, age = {self.age})"
