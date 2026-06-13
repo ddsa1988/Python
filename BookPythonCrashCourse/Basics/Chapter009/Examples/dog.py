@@ -14,7 +14,7 @@ class Dog:
         """Simulate  a dog rolling over in response to a command"""
         print(f"{self.name} rolled over")
 
-    def __eq__(self, other: Dog):
+    def __eq__(self, other):
         """Compare if two dog objects are equals"""
         if not isinstance(other, Dog):
             return NotImplemented
