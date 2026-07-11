@@ -1,7 +1,5 @@
 def main() -> None:
-    phrase: str = "Hello World."
-
-    print(type(phrase))
+    pass
 
 
 if (__name__ == "__main__"):
