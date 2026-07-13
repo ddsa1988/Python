@@ -51,12 +51,16 @@ def exercise005() -> None:
 def main() -> None:
     exercise001()
     print()
+
     exercise002()
     print()
+
     exercise003()
     print()
+
     exercise004()
     print()
+
     exercise005()
 
 
