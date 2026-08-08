@@ -5,7 +5,7 @@ def main() -> None:
     my_name: str = "diego"
     my_birthdate: date = date(1988, 1, 22)
 
-    print("My name is", my_name, " and I was born in", str(my_birthdate), ".")
+    print("My name is", my_name, "and I was born in", str(my_birthdate), ".")
 
     print("My name is " + my_name +
           " and I was born in " + str(my_birthdate) + ".")
