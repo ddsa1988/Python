@@ -10,7 +10,7 @@ def send_messages(messages: list[str], sent_messages: list[str]) -> None:
 
 
 messages: list[str] = ["Message 1", "Message 2", "Message 3"]
-sent_messages = []
+sent_messages: list[str] = []
 
 send_messages(messages, sent_messages)
 

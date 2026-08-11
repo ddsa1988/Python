@@ -1,10 +1,10 @@
 from datetime import date
 
 
-def build_person(first_name: str, last_name: str, birthdate: date = None) -> dict[str, str]:
-    person = {}
+def build_person(first_name: str, last_name: str, birthdate: date | None = None) -> dict[str, str]:
+    person: dict[str, str] = {}
 
-    if (first_name.strip() == 0 or last_name.strip() == 0):
+    if (len(first_name.strip()) == 0 or len(last_name.strip()) == 0):
         return {}
 
     person["first_name"] = first_name.title()

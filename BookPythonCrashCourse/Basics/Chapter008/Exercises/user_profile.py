@@ -1,4 +1,4 @@
-def build_profile(first_name: str, last_name: str, **user_profile: dict[str, str]) -> dict[str, str]:
+def build_profile(first_name: str, last_name: str, **user_profile: str) -> dict[str, str]:
     if (len(first_name.strip()) == 0 or len(last_name.strip()) == 0):
         return user_profile
 
