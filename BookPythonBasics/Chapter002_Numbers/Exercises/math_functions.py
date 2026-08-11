@@ -1,4 +1,4 @@
-def exercise001() -> None:
+def exercise_001() -> None:
     decimal_places: int = 2
     number: float
 
@@ -16,7 +16,7 @@ def exercise001() -> None:
     print(f"{number} rounded to {decimal_places} decimal places is {result}.")
 
 
-def exercise002() -> None:
+def exercise_002() -> None:
     number: float
 
     prompt: str = "Enter a negative number: "
@@ -33,7 +33,7 @@ def exercise002() -> None:
     print(f"The absolute value of {number} is {result}.")
 
 
-def exercise003() -> None:
+def exercise_003() -> None:
     number_1: float
     number_2: float
 
@@ -62,13 +62,13 @@ def exercise003() -> None:
 
 
 def main() -> None:
-    exercise001()
+    exercise_001()
     print()
 
-    exercise002()
+    exercise_002()
     print()
 
-    exercise003()
+    exercise_003()
     print()
 
 

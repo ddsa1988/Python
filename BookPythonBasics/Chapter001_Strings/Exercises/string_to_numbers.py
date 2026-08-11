@@ -1,4 +1,4 @@
-def exercise001() -> None:
+def exercise_001() -> None:
     my_string: str = "18.75"
     my_multiplier: int = 2
     my_number: float = float(my_string)
@@ -7,7 +7,7 @@ def exercise001() -> None:
         print(f"{my_number} * {my_multiplier} -> {my_number * my_multiplier}")
 
 
-def exercise002() -> None:
+def exercise_002() -> None:
     my_string: str = "18"
     my_multiplier: int = 2
     my_number: int = int(my_string)
@@ -16,7 +16,7 @@ def exercise002() -> None:
         print(f"{my_number} * {my_multiplier} -> {my_number * my_multiplier}")
 
 
-def exercise003() -> None:
+def exercise_003() -> None:
     msg: str = "this is some text"
     my_number: int = 17
     text: str = "Msg: " + msg.capitalize() + "." + "\nThis is a number: " + \
@@ -25,7 +25,7 @@ def exercise003() -> None:
     print(text)
 
 
-def exercise004() -> None:
+def exercise_004() -> None:
     first_number: float
     second_number: float
 
@@ -49,16 +49,16 @@ def exercise004() -> None:
 
 
 def main() -> None:
-    exercise001()
+    exercise_001()
     print()
 
-    exercise002()
+    exercise_002()
     print()
 
-    exercise003()
+    exercise_003()
     print()
 
-    exercise004()
+    exercise_004()
     print()
 
 

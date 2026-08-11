@@ -16,4 +16,3 @@ print()
 
 places_to_visit.sort(reverse=True)
 print(places_to_visit)
-print

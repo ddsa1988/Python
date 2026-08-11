@@ -1,4 +1,4 @@
-def exercise001() -> None:
+def exercise_001() -> None:
     words: list[str] = ["Animals", "Badger", "Honey Bee", "Honey badger"]
 
     print("Words to lower case:")
@@ -7,7 +7,7 @@ def exercise001() -> None:
         print(word.lower())
 
 
-def exercise002() -> None:
+def exercise_002() -> None:
     words: list[str] = ["Animals", "Badger", "Honey Bee", "Honey badger"]
 
     print("Words to upper case:")
@@ -16,7 +16,7 @@ def exercise002() -> None:
         print(word.upper())
 
 
-def exercise003() -> None:
+def exercise_003() -> None:
     words: list[str] = ["    Filet Mignon",
                         "Brisket    ", "    Cheeseburger    "]
 
@@ -26,7 +26,7 @@ def exercise003() -> None:
         print(word.strip())
 
 
-def exercise004() -> None:
+def exercise_004() -> None:
     words: list[str] = ["Becomes", "becomes", "BEAR", "    bEautiful"]
     searchWord = "be"
 
@@ -36,7 +36,7 @@ def exercise004() -> None:
         print(f"{word} -> {word.startswith(searchWord)}")
 
 
-def exercise005() -> None:
+def exercise_005() -> None:
     words: list[str] = ["Becomes", "becomes", "BEAR", "    bEautiful"]
     searchWord = "be"
 
@@ -49,19 +49,19 @@ def exercise005() -> None:
 
 
 def main() -> None:
-    exercise001()
+    exercise_001()
     print()
 
-    exercise002()
+    exercise_002()
     print()
 
-    exercise003()
+    exercise_003()
     print()
 
-    exercise004()
+    exercise_004()
     print()
 
-    exercise005()
+    exercise_005()
 
 
 if (__name__ == "__main__"):
