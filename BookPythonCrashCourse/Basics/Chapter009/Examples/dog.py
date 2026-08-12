@@ -2,10 +2,11 @@ class Dog:
     """A simple attempt to model a dog"""
 
     def __init__(self, name: str, age: int) -> None:
-        """
-        Initialize name and age attributes.
-        @param name - dog's name
-        @param age - dog's age
+        """Constructor
+
+        Args:
+            name (str): dogs' name
+            age (int): dog's age
         """
         self.name: str = name
         self.age: int = age
@@ -19,9 +20,13 @@ class Dog:
         print(f"{self.name} rolled over")
 
     def __eq__(self, other: object) -> bool:
-        """
-        Compare if two dog objects are equals
-        @param other - another dog to be compared to
+        """Compare if two dogs objects are equals
+
+        Args:
+            other (object): another dog to be compared to
+
+        Returns:
+            bool: True if the dogs are equals
         """
         if not isinstance(other, Dog):
             return False
