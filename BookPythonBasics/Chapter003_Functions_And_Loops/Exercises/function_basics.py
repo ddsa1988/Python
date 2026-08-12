@@ -1,9 +1,20 @@
+def cube(number: float) -> float:
+    result: float = number ** 3
+
+    return result
+
+
+def greet(name: str) -> None:
+    print(f"Hello {name}!")
+
+
 def exercise_001() -> None:
-    pass
+    print(f"{cube(3):.0f}")
+    print(f"{cube(9):.0f}")
 
 
 def exercise_002() -> None:
-    pass
+    greet("Diego")
 
 
 def main() -> None:
