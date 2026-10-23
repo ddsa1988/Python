@@ -1,3 +1,11 @@
+def the_in_operator():
+    text: str = "Hello World!"
+    search: str = "World"
+
+    print(search in text)
+    print()
+
+
 def changing_case():
     text: str = "Hello, world!"
 
@@ -9,20 +17,47 @@ def changing_case():
 
 
 def check_string_characteristics():
-    print("diego".islower())
-    print("diego.".isupper())
-    print("diego1988".isalnum())
+    text: str = "diego"
+    print(text.islower())
+    print(text.isupper())
+    print((text + "1988").isalnum())
     print("     ".isspace())
     print()
 
 
 def check_start_end_string():
-    pass
+    text: str = "Hello World!"
+
+    print(text.startswith("Hello"))
+    print(text.endswith("?"))
+    print()
+
+
+def join_split_string():
+    my_strings: list[str] = ["diego", "amanda", "amora", "eduarda", "ameixa"]
+    print(", ".join(my_strings))
+
+    text: str = """Dear Alice,
+    There is a milk bottle in the fridge
+    that is labeled "Milk Experiment."""
+
+    text_split: list[str] = text.split("\n")  # type: ignore
+    print(text_split)
+
+    print()
 
 
 def main():
+    the_in_operator()
     changing_case()
     check_string_characteristics()
+    check_start_end_string()
+    join_split_string()
+    justify_and_centering()
+
+
+def justify_and_centering():
+    pass
 
 
 if (__name__ == "__main__"):
