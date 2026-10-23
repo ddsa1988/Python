@@ -47,6 +47,22 @@ def join_split_string():
     print()
 
 
+def justify_and_centering():
+    text: str = "Hello World!"
+
+    print(text.rjust(20, "*"))
+    print(text.ljust(20, "*"))
+    print()
+
+
+def remove_whitespace():
+    text: str = "     Hello World     "
+
+    print(text.lstrip())
+    print(text.rstrip() + " *")
+    print(text.strip())
+
+
 def main():
     the_in_operator()
     changing_case()
@@ -54,12 +70,7 @@ def main():
     check_start_end_string()
     join_split_string()
     justify_and_centering()
-
-
-def justify_and_centering():
-    text: str = "Hello World!"
-
-    print()
+    remove_whitespace()
 
 
 if (__name__ == "__main__"):
