@@ -57,7 +57,9 @@ def main():
 
 
 def justify_and_centering():
-    pass
+    text: str = "Hello World!"
+
+    print()
 
 
 if (__name__ == "__main__"):
