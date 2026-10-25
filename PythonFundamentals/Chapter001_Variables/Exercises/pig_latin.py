@@ -7,7 +7,7 @@ def translate_to_pig_latin(text: str) -> str:
     VOWELS: list[str] = ['a', 'e', 'i', 'o', 'u', 'y']
     pig_latin: list[str] = []
 
-    words: list[str] = text.split()
+    words: list[str] = text.strip().split()
     print(words)
 
     return ""
