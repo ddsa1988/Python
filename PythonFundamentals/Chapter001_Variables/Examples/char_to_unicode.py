@@ -1,6 +1,6 @@
 def main():
-    print(ord("A"))
-    print(ord("a"))
+    print(ord('A'))
+    print(ord('a'))
 
 
 if (__name__ == "__main__"):
