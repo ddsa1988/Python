@@ -1,9 +1,9 @@
 def split_text(text: str, separator: str) -> list[str]:
     if (type(text) != str):
-        raise Exception("Text must be a string type.")
+        raise TypeError("Text must be a string type.")
 
     if (type(separator) != str):
-        raise Exception("Separator must be a string type")
+        raise TypeError("Separator must be a string type")
 
     new_list: list[str] = text.split(separator)
 
