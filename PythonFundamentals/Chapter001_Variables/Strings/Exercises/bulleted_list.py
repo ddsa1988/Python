@@ -16,7 +16,7 @@ def add_bullet(word: str) -> str:
     return new_word
 
 
-def main():
+def main() -> None:
     content: str = """Lists of animals
 Lists of aquarium life
 Lists of biologists by author abbreviation

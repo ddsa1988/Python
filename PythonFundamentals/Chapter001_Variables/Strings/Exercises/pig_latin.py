@@ -79,7 +79,7 @@ def english_to_pig_latin(word: str) -> str:
     return " ".join(pig_latin)
 
 
-def main():
+def main() -> None:
     content: str = "My name is AL SWEIGART and I am 4,000 years old."
 
     expected_output: str = "Ymay amenay isyay ALYAY EIGARTSWAY andyay Iyay amyay 4,000 yearsyay oldyay."

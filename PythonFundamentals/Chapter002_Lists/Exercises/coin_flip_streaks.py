@@ -40,7 +40,7 @@ def get_number_streaks(coin_flips: list[str], streak: int) -> int:
     return number_streaks
 
 
-def main():
+def main() -> None:
     list_coin_flips: list[str] = generate_list_heads_and_tails(times=100)
 
     number_of_streaks: int = get_number_streaks(

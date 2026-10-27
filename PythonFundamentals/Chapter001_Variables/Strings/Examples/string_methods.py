@@ -1,4 +1,4 @@
-def the_in_operator():
+def the_in_operator() -> None:
     text: str = "Hello World!"
     search: str = "World"
 
@@ -6,7 +6,7 @@ def the_in_operator():
     print()
 
 
-def changing_case():
+def changing_case() -> None:
     text: str = "Hello, world!"
 
     print(text.capitalize())
@@ -16,7 +16,7 @@ def changing_case():
     print()
 
 
-def check_string_characteristics():
+def check_string_characteristics() -> None:
     text: str = "diego"
     print(text.islower())
     print(text.isupper())
@@ -25,7 +25,7 @@ def check_string_characteristics():
     print()
 
 
-def check_start_end_string():
+def check_start_end_string() -> None:
     text: str = "Hello World!"
 
     print(text.startswith("Hello"))
@@ -33,7 +33,7 @@ def check_start_end_string():
     print()
 
 
-def join_split_string():
+def join_split_string() -> None:
     my_strings: list[str] = ["diego", "amanda", "amora", "eduarda", "ameixa"]
     print(", ".join(my_strings))
 
@@ -47,7 +47,7 @@ def join_split_string():
     print()
 
 
-def justify_and_centering():
+def justify_and_centering() -> None:
     text: str = "Hello World!"
 
     print(text.rjust(20, "*"))
@@ -55,7 +55,7 @@ def justify_and_centering():
     print()
 
 
-def remove_whitespace():
+def remove_whitespace() -> None:
     text: str = "     Hello World     "
 
     print(text.lstrip())
@@ -63,7 +63,7 @@ def remove_whitespace():
     print(text.strip())
 
 
-def main():
+def main() -> None:
     the_in_operator()
     changing_case()
     check_string_characteristics()

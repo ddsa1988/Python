@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     spam: list[str] = ["cat", "bat", "rat", "elephant"]
 
     print(str(spam) + "\n")

@@ -1,4 +1,4 @@
-def basic_of_integers():
+def basic_of_integers() -> None:
     my_int: int = 10
 
     print(type(my_int))
@@ -6,7 +6,7 @@ def basic_of_integers():
     print()
 
 
-def parse_string_to_int():
+def parse_string_to_int() -> None:
     my_number: int = int("50")
 
     print(type(my_number))
@@ -14,7 +14,7 @@ def parse_string_to_int():
     print()
 
 
-def main():
+def main() -> None:
     basic_of_integers()
     parse_string_to_int()
 

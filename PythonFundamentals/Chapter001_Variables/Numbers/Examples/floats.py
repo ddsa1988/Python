@@ -1,4 +1,4 @@
-def basic_of_floats():
+def basic_of_floats() -> None:
     my_float: float = 10.75
 
     print(type(my_float))
@@ -6,7 +6,7 @@ def basic_of_floats():
     print()
 
 
-def parse_string_to_float():
+def parse_string_to_float() -> None:
     my_number: float = float("50.25")
 
     print(type(my_number))
@@ -14,7 +14,7 @@ def parse_string_to_float():
     print()
 
 
-def main():
+def main() -> None:
     basic_of_floats()
     parse_string_to_float()
 

@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 
-def decimals():
+def decimals() -> None:
     my_decimal: Decimal = Decimal(10.75)
 
     print(type(my_decimal))
@@ -9,7 +9,7 @@ def decimals():
     print()
 
 
-def parse_string_to_decimal():
+def parse_string_to_decimal() -> None:
     my_number: Decimal = Decimal("50.25")
 
     print(type(my_number))
@@ -17,7 +17,7 @@ def parse_string_to_decimal():
     print()
 
 
-def main():
+def main() -> None:
     decimals()
     parse_string_to_decimal()
 

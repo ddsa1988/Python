@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     numbers: list[int] = [30, 10, 20]
 
     print(sorted(numbers))

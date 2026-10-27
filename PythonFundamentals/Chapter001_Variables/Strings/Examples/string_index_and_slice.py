@@ -1,4 +1,4 @@
-def indexes():
+def indexes() -> None:
     full_name: str = "Diego dos Santos Alexander"
 
     print(full_name[0])
@@ -11,7 +11,7 @@ def indexes():
     print()
 
 
-def slicing():
+def slicing() -> None:
     full_name: str = "Diego dos Santos Alexander"
 
     first_name: str = full_name[0:5]
@@ -23,7 +23,7 @@ def slicing():
     print(full_name[:])
 
 
-def main():
+def main() -> None:
     indexes()
     slicing()
 

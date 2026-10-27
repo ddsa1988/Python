@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     numbers: list[int] = [10, 20, 30]
 
     numbers.append(100)

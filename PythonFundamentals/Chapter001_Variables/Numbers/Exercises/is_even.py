@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     user_number: int
     user_input: str
 

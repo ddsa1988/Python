@@ -1,4 +1,4 @@
-def subtraction():
+def subtraction() -> None:
     my_int_1: int = 10
     my_int_2: int = 15
 
@@ -11,7 +11,7 @@ def subtraction():
     print()
 
 
-def addition():
+def addition() -> None:
     my_int_1: int = 10
     my_int_2: int = 15
 
@@ -24,7 +24,7 @@ def addition():
     print()
 
 
-def multiplication():
+def multiplication() -> None:
     my_int_1: int = 10
     my_int_2: int = 15
 
@@ -37,7 +37,7 @@ def multiplication():
     print()
 
 
-def division():
+def division() -> None:
     my_int_1: int = 10
     my_int_2: int = 15
 

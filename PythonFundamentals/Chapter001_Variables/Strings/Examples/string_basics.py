@@ -1,28 +1,28 @@
-def escape_characters():
+def escape_characters() -> None:
     print("Say hi to Bob\'s mother")
     print("Hello there!\nHow are you?\nI'm doing\tfine.")
     print()
 
 
-def raw_strings():
+def raw_strings() -> None:
     print(r"The file is in C:\Users\Alice\Desktop")
     print()
 
 
-def multiline_strings():
+def multiline_strings() -> None:
     print(""" Dear Alice,
     Can you feed the cat?
 """)
     print()
 
 
-def string_format():
+def string_format() -> None:
     message: str = "Goof morning!"
 
     print(f"{message}")
 
 
-def main():
+def main() -> None:
     escape_characters()
     raw_strings()
     multiline_strings()

@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     cat: list[str] = ["fat", "gray", "loud"]
 
     size: str

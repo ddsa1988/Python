@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     numbers: tuple[int, int, int] = (101, 50, 80)
 
     print(numbers)

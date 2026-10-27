@@ -15,7 +15,7 @@ def list_to_string(arr: list[str]) -> str:
     return new_string
 
 
-def main():
+def main() -> None:
     spam: list[str] = ["apples", "bananas", "tofu", "cats"]
 
     print(list_to_string(spam))
