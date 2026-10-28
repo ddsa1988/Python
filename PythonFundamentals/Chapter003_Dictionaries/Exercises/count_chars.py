@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     text: str = "Diego dos Santos Alexander"
 
     count_chars: dict[str, int] = {}

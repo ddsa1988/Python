@@ -2,7 +2,7 @@ from datetime import datetime
 from datetime import date
 
 
-def main():
+def main() -> None:
     birthdays: dict[str, date] = {}
     date_object: date | None = None
 

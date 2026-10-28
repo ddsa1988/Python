@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     spam: dict[str, str | int] = {"color": "red", "age": 42}
 
     print(spam.keys())
