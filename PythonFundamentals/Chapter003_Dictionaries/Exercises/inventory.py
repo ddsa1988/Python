@@ -1,5 +1,13 @@
-def display_inventory(items: dict[str, int]) -> None:
-    raise NotImplementedError
+def display_inventory(inventory: dict[str, int]) -> None:
+    print("Inventory:\n")
+
+    number_of_items: int = 0
+
+    for key, value in inventory.items():
+        print(f"{key} = {value}")
+        number_of_items += value
+
+    print(f"\nTotal number of items: {number_of_items}")
 
 
 def main() -> None:
