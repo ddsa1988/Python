@@ -1,0 +1,37 @@
+from datetime import datetime
+from datetime import date
+
+
+def main():
+    birthdays: dict[str, date] = {}
+    date_object: date | None = None
+
+    while (True):
+        name: str = input("Enter a name: (black to quit): ")
+
+        if (len(name.strip()) == 0):
+            break
+
+        name = name.title()
+
+        if (name in birthdays):
+            print(f"{birthdays.get(name, datetime.now())} is the birthday of {name}")
+        else:
+            while (True):
+                date_string: str = input("Birthday (yyyy/mm/dd): ")
+
+                try:
+                    date_object = datetime.strptime(
+                        date_string, "%Y/%m/%d").date()
+
+                    birthdays[name] = date_object
+
+                    print("Database updated.")
+
+                    break
+                except:
+                    print("Invalid date")
+
+
+if (__name__ == "__main__"):
+    main()

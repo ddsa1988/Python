@@ -8,6 +8,7 @@ def main() -> None:
     print(my_cat)
     print(my_cat["size"])
     print(my_cat.get("age"))
+    print(my_cat.get("test", "default"))
 
     try:
         print(my_cat["test"])
