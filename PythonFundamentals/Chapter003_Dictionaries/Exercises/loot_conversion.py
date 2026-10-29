@@ -1,6 +1,6 @@
 def add_to_inventory(inventory: dict[str, int], added_items: list[str]) -> None:
     for item in added_items:
-        if (item in inventory.keys()):
+        if (item in inventory):
             inventory[item] += 1
         else:
             inventory[item] = 1

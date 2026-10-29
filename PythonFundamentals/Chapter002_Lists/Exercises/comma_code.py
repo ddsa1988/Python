@@ -1,6 +1,6 @@
 def list_to_string(arr: list[str]) -> str:
     if (type(arr) != list):
-        TypeError("Arr must be a list type.")
+        raise TypeError("Arr must be a list type.")
 
     if (len(arr) == 0):
         return ""

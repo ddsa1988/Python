@@ -19,7 +19,7 @@ def generate_list_heads_and_tails(times: int) -> list[str]:
 
 def get_number_streaks(coin_flips: list[str], streak: int) -> int:
     if (type(coin_flips) != list):
-        TypeError("Coin flips must be a list type.")
+        raise TypeError("Coin flips must be a list type.")
 
     if (type(streak) != int or streak < 1):
         return 0

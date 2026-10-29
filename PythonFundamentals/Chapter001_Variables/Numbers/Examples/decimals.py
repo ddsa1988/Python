@@ -2,7 +2,7 @@ from decimal import Decimal
 
 
 def decimals() -> None:
-    my_decimal: Decimal = Decimal(10.75)
+    my_decimal: Decimal = Decimal("10.75")
 
     print(type(my_decimal))
     print(my_decimal)

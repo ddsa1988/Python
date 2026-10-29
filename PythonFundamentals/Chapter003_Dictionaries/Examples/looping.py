@@ -6,7 +6,7 @@ def main() -> None:
     print(spam.items())
     print()
 
-    for key in spam.keys():
+    for key in spam:
         print(key)
 
     print()

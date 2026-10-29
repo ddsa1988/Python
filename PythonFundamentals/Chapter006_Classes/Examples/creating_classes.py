@@ -1,5 +1,5 @@
 def main() -> None:
-    pass
+    raise NotImplementedError
 
 
 if (__name__ == "__main__"):

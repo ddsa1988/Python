@@ -1,5 +1,4 @@
-from datetime import datetime
-from datetime import date
+from datetime import date, datetime
 
 
 def main() -> None:
@@ -20,6 +19,9 @@ def main() -> None:
             while (True):
                 date_string: str = input("Birthday (yyyy/mm/dd): ")
 
+                date_object = datetime.strptime(
+                    date_string, "%Y/%m/%d").date()
+
                 try:
                     date_object = datetime.strptime(
                         date_string, "%Y/%m/%d").date()
@@ -29,8 +31,8 @@ def main() -> None:
                     print("Database updated.")
 
                     break
-                except:
-                    print("Invalid date")
+                except ValueError as ex:
+                    print(f"Invalid date = {ex}")
 
 
 if (__name__ == "__main__"):
