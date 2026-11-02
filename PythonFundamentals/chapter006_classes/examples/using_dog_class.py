@@ -1,8 +1,4 @@
-# from PythonFundamentals.chapter006_classes.models.dog_class import Dog
-
-from ..models.dog_class import Dog
-
-# from chapter006_classes execute python3 -m examples.using_dog_class
+from models.dog_class import Dog
 
 
 def main() -> None:
