@@ -5,7 +5,9 @@ from pathlib import Path
 def main() -> None:
     print(Path.cwd())
     print(Path.home())
+    print()
 
+    print(os.getcwd())
     print(os.sep)
 
 
