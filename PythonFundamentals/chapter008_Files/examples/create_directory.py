@@ -17,6 +17,11 @@ def main() -> None:
 
     os.makedirs(folder_path)
 
+    # Path("path").mkdir() can only make one directory at a time; it won’t make several subdirectories at once,
+    # like os.makedirs() will.
+
+    # path.mkdir()
+
 
 if (__name__ == "__main__"):
     main()

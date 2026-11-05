@@ -13,15 +13,16 @@ def main() -> None:
 
     logger.warning("Starting...")
 
+    print(path.anchor)
     print(path.parent)
     print(path.parents[0])
     print(path.parents[1])
     print(path.parents[2])
     print(path.name)
-    print(path.name)
     print(path.stem)
     print(path.suffix)
     print(path.drive)
+    print(path.parts)
 
 
 if (__name__ == "__main__"):
