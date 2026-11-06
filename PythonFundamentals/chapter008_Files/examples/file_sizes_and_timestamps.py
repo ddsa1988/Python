@@ -16,7 +16,7 @@ def main() -> None:
 
     path: Path = Path(file_path)
 
-    if (not path.exists()):
+    if (not path.is_file()):
         logger.warning(f"File do not exist: {file_path}")
         return
 

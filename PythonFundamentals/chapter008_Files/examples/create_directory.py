@@ -13,7 +13,7 @@ def main() -> None:
 
     path: Path = Path(folder_path)
 
-    if (path.exists()):
+    if (path.is_dir()):
         logger.debug(f"Folder already exists: {folder_path}")
         return
 

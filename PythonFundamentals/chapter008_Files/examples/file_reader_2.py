@@ -13,7 +13,7 @@ def main() -> None:
 
     path: Path = Path(file_path)
 
-    if (not Path.exists(path)):
+    if (not Path.is_file(path)):
         logger.debug(f"File path not found: {file_path}")
         return
 
