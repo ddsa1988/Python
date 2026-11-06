@@ -10,10 +10,11 @@ def main() -> None:
                         format="%(asctime)s - %(levelname)s - %(message)s")
 
     file_path: str = f"{Path(__file__).parent}{os.sep}files{os.sep}pi_million_digits.txt"
+
     path: Path = Path(file_path)
 
     if (not path.exists()):
-        logger.warning(f"File path not found: {file_path}")
+        logger.debug(f"File path not found: {file_path}")
         return
 
     # with open(file=path, mode="r", encoding="utf-8") as file:

@@ -5,14 +5,16 @@ from pathlib import Path
 
 def main() -> None:
     logger: logging.Logger = logging.getLogger(__name__)
+
     logging.basicConfig(level=logging.DEBUG,
                         format="%(asctime)s - %(levelname)s - %(message)s")
 
     folder_path: str = f"{Path(__file__).parent}{os.sep}new_folder{os.sep}test"
+
     path: Path = Path(folder_path)
 
     if (path.exists()):
-        logger.warning(f"Folder already exists: {folder_path}")
+        logger.debug(f"Folder already exists: {folder_path}")
         return
 
     os.makedirs(folder_path)

@@ -9,9 +9,10 @@ def main() -> None:
                         format="%(asctime)s - %(levelname)s - %(message)s")
 
     folder_path: str = f"{Path(__file__).parent}{os.sep}new_folder{os.sep}test"
+
     path: Path = Path(folder_path)
 
-    logger.warning("Starting...")
+    logger.debug("Starting...")
 
     print(path.anchor)
     print(path.parent)

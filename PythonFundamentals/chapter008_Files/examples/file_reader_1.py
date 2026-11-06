@@ -14,7 +14,7 @@ def main() -> None:
     path: Path = Path(file_path)
 
     if (not Path.exists(path)):
-        logger.warning(f"File path not found: {file_path}")
+        logger.debug(f"File path not found: {file_path}")
         return
 
     content: str = path.read_text().strip()
