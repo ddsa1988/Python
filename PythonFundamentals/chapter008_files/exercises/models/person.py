@@ -1,9 +1,12 @@
 from datetime import date, timedelta
+from json import JSONEncoder
+from typing import Any
 
 
-class Person:
-    def __init__(self) -> None:
-        pass
+class Person(JSONEncoder):
+    def __init__(self, name: str, birthdate: date) -> None:
+        self.name = name
+        self.birthdate = birthdate
 
     @property
     def name(self) -> str:
@@ -35,6 +38,15 @@ class Person:
             raise ValueError("birthdate must be greater or equal than today.")
 
         self._birthdate = birthdate
+
+    def to_dict(self) -> dict[str, str]:
+        return {"name": self.name, "birthdate": self.birthdate.isoformat()}
+
+    def default(self, o: Any) -> Any:
+        if isinstance(o, date):
+            return o.isoformat()
+
+        return super().default(o)
 
     def __str__(self) -> str:
         return f"Person (name = {self.name}, birthdate = {self.birthdate})"
