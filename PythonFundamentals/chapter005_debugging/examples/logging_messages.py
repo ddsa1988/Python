@@ -7,8 +7,7 @@ def main() -> None:
     # logging.basicConfig(filename="log_example.log", level=logging.DEBUG,
     #                     format=" %(asctime)s - %(levelname)s - %(message)s")
 
-    logging.basicConfig(level=logging.DEBUG,
-                        format=" %(asctime)s - %(levelname)s - %(message)s")
+    logging.basicConfig(level=logging.DEBUG, format=" %(asctime)s - %(levelname)s - %(message)s")
 
     logger.debug("Some minor code and debugging details.")
 

@@ -24,8 +24,7 @@ def display_inventory(inventory: dict[str, int]) -> None:
 def main() -> None:
     user_inventory: dict[str, int] = {"gold coin": 42, "rope": 1}
 
-    dragon_loot: list[str] = ['gold coin',
-                              'dagger', 'gold coin', 'gold coin', 'ruby']
+    dragon_loot: list[str] = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
     add_to_inventory(user_inventory, dragon_loot)
     display_inventory(user_inventory)

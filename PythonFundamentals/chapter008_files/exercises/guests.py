@@ -6,8 +6,7 @@ from pathlib import Path
 def main() -> None:
     logger: logging.Logger = logging.getLogger(__name__)
 
-    logging.basicConfig(level=logging.DEBUG,
-                        format="%(asctime)s - %(levelname)s - %(message)s")
+    logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
     directory_path: str = f"{Path(__file__).parent}{os.sep}files"
     file_path: str = f"{directory_path}{os.sep}guest.txt"
@@ -23,8 +22,7 @@ def main() -> None:
                 path: Path = Path(directory_path)
                 path.mkdir()
             except PermissionError as ex:
-                logger.warning(
-                    f"Insufficient permissions to create directory: {ex}")
+                logger.warning(f"Insufficient permissions to create directory: {ex}")
                 return
             except OSError as ex:
                 logger.warning(f"Failed to create directory: {ex}")

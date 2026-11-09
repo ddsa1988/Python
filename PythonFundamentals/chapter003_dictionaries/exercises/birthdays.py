@@ -23,8 +23,7 @@ def main() -> None:
                     date_string, "%Y/%m/%d").date()
 
                 try:
-                    date_object = datetime.strptime(
-                        date_string, "%Y/%m/%d").date()
+                    date_object = datetime.strptime(date_string, "%Y/%m/%d").date()
 
                     birthdays[name] = date_object
 

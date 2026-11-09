@@ -7,8 +7,7 @@ from pathlib import Path
 def main() -> None:
     logger: logging.Logger = logging.getLogger(__name__)
 
-    logging.basicConfig(level=logging.DEBUG,
-                        format="%(asctime)s - %(levelname)s - %(message)s")
+    logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
     logger.debug("Starting...")
 

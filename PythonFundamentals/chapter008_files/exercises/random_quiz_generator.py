@@ -53,8 +53,7 @@ def main() -> None:
             with open(file=f"{directory_path}{os.sep}capitals_quiz_{quiz_num + 1}.txt", mode="w", encoding="utf-8") as quiz_file, open(file=f"{directory_path}{os.sep}capitals_quiz_answers_{quiz_num + 1}.txt", mode="w", encoding="utf-8") as answer_file:
                 # Create the header for the quiz
                 quiz_file.write("Name:\n\nDate:\n\nPeriod:\n\n")
-                quiz_file.write(
-                    (" " * 20) + f"State Capitals Quiz (Form {quiz_num + 1})\n\n")
+                quiz_file.write((" " * 20) + f"State Capitals Quiz (Form {quiz_num + 1})\n\n")
 
                 # Shuffle the order of the states
                 states: list[str] = list(capitals.keys())
@@ -70,26 +69,23 @@ def main() -> None:
                     wrong_answers: list[str] = list(capitals.values())
                     wrong_answers.remove(correct_answer)
 
-                    wrong_answers = random.sample(wrong_answers, 3)
+                    wrong_answers = random.sample(wrong_answers, len(QUIZ_OPTIONS) - 1)
 
-                    answer_options: list[str] = wrong_answers + \
-                        [correct_answer]
+                    answer_options: list[str] = wrong_answers + [correct_answer]
                     random.shuffle(answer_options)
 
                     quiz_file.write(f"{num + 1}. Capital of {states[num]}:\n")
 
                     # Write the question and the answer options to the quiz file.
-                    quiz_file.writelines(
-                        f"{QUIZ_OPTIONS[i]}.  {answer_options[i]}\n" for i in range(4))
+                    quiz_file.writelines(f"{QUIZ_OPTIONS[i]}. {answer_options[i]}\n" for i in range(len(QUIZ_OPTIONS)))
                     quiz_file.write("\n")
 
                     # Write the answer key to a file.
-                    answer_file.write(
-                        f"{num + 1}. {QUIZ_OPTIONS[answer_options.index(correct_answer)]}\n")
+                    number_str: str = str(num + 1) if num + 1 > 9 else "0" + str(num + 1)
+                    answer_file.write(f"{number_str}. {QUIZ_OPTIONS[answer_options.index(correct_answer)]}\n")
 
         except PermissionError as ex:
-            logger.warning(
-                f"Insufficient permissions to create directory: {ex}")
+            logger.warning(f"Insufficient permissions to create directory: {ex}")
             return
         except OSError as ex:
             logger.warning(f"Failed to create directory: {ex}")

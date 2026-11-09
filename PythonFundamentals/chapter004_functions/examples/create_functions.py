@@ -15,8 +15,7 @@ def get_formatted_name(first_name: str, last_name: str) -> str:
 
 
 def build_person(first_name: str, last_name: str, age: int | None = None) -> dict[str, str | int]:
-    person: dict[str, str | int] = {
-        'first name': first_name, "last name": last_name}
+    person: dict[str, str | int] = {'first name': first_name, "last name": last_name}
 
     if (age != None):
         person["age"] = age
