@@ -1,9 +1,9 @@
 def main() -> None:
     cat: list[str] = ["fat", "gray", "loud"]
 
-    size: str
-    color: str
-    disposition: str
+    size: str = ""
+    color: str = ""
+    disposition: str = ""
 
     size, color, disposition = cat
 

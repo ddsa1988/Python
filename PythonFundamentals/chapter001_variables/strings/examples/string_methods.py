@@ -1,3 +1,6 @@
+from typing import LiteralString
+
+
 def the_in_operator() -> None:
     text: str = "Hello World!"
     search: str = "World"
@@ -41,7 +44,7 @@ def join_split_string() -> None:
     There is a milk bottle in the fridge
     that is labeled "Milk Experiment."""
 
-    text_split: list[str] = text.split("\n")  # type: ignore
+    text_split: list[LiteralString] = text.split("\n")
     print(text_split)
 
     print()
