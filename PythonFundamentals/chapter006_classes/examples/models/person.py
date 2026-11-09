@@ -18,7 +18,7 @@ class Person:
         if (len(name.strip()) == 0):
             raise ValueError("name can't be empty.")
 
-        self._name = name.title()
+        self._name = name.strip().title()
 
     @property
     def birthdate(self) -> date:
