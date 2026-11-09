@@ -25,7 +25,7 @@ def main() -> None:
     print(file_stats.st_mtime)
 
     print(time.asctime(time.localtime(file_stats.st_mtime)))
-    print(time.asctime(time.localtime(file_stats.st_ctime)))
+    print(time.asctime(time.localtime(file_stats.st_birthtime)))
     print(time.asctime(time.localtime(file_stats.st_atime)))
 
 
