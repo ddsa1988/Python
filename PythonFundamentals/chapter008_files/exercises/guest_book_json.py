@@ -12,10 +12,12 @@ def main() -> None:
     logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
     directory_path: str = f"{Path(__file__).parent}{os.sep}files"
+    file_path: str = directory_path + os.sep + "guest_book.json"
 
     if (not os.path.isdir(directory_path)):
         try:
-            pass
+            path: Path = Path(directory_path)
+            path.mkdir()
         except PermissionError as ex:
             logger.warning(f"Insufficient permissions to create directory: {ex}")
             return
@@ -39,7 +41,13 @@ def main() -> None:
         logger.warning(f"Invalid JSON value error: {ex}")
         return
 
-    print(json_content)
+    try:
+        with open(file=file_path, mode="w", encoding="utf-8") as file:
+            file.write(json_content)
+    except PermissionError as ex:
+        logger.warning(f"Insufficient permissions to write file: {ex}")
+    except OSError as ex:
+        logger.warning(f"Failed to write file: {ex}")
 
 
 if (__name__ == "__main__"):

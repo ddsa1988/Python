@@ -49,4 +49,4 @@ class Person(JSONEncoder):
         return super().default(o)
 
     def __str__(self) -> str:
-        return f"Person (name = {self.name}, birthdate = {self.birthdate})"
+        return f"Person [name = {self.name}, birthdate = {self.birthdate}]"
