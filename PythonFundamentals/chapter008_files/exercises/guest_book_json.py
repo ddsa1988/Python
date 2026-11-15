@@ -1,7 +1,7 @@
 import json
 import logging
 import os
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 from models.person import Person
@@ -48,6 +48,65 @@ def main() -> None:
         logger.warning(f"Insufficient permissions to write file: {ex}")
     except OSError as ex:
         logger.warning(f"Failed to write file: {ex}")
+
+    _: str = input("Type any key to continue: ")
+
+    if (not os.path.isfile(file_path)):
+        logger.warning(f"File not found: {file_path}")
+        return
+
+    people: list[dict[str, str]] | None = None
+
+    try:
+        with open(file=file_path, mode="r", encoding="utf-8") as file:
+            file_content: str = file.read()
+            people = json.loads(file_content)
+    except PermissionError as ex:
+        logger.warning(f"Insufficient permissions to write file: {ex}")
+    except OSError as ex:
+        logger.warning(f"Failed to read file: {ex}")
+
+    if (people == None):
+        return
+
+    guests_from_file: list[Person] = []
+
+    for obj in people:
+        name: str | None = obj.get("name")
+        date_str: str | None = obj.get("birthdate")
+
+        if (name == None):
+            continue
+
+        if (len(name.strip()) == 0):
+            continue
+
+        if (date_str == None):
+            continue
+
+        birthdate: date
+
+        try:
+            birthdate = datetime.strptime(date_str, "%Y-%m-%d").date()
+        except ValueError as ex:
+            logger.warning(f"Invalid date value: {ex}")
+            continue
+        except TypeError as ex:
+            logger.warning(f"Invalid date type: {ex}")
+            continue
+
+        person: Person
+
+        try:
+            person = Person(name=name, birthdate=birthdate)
+        except (ValueError, TypeError) as ex:
+            logger.warning(f"Failed to create person object: {ex}")
+            continue
+
+        guests_from_file.append(person)
+
+    for guest in guests_from_file:
+        print(guest)
 
 
 if (__name__ == "__main__"):
