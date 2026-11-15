@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+from models.user import User
 
 
 def create_directory(path: str) -> bool:
@@ -27,6 +28,8 @@ def main() -> None:
 
     if (not is_dir):
         logger.warning("Failed to create directory " + directory_path)
+
+    users: list[User] = []
 
 
 if (__name__ == "__main__"):

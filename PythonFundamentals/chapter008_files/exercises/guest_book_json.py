@@ -75,16 +75,16 @@ def main() -> None:
         name: str | None = obj.get("name")
         date_str: str | None = obj.get("birthdate")
 
-        if (name == None):
+        if (type(name) != str):
             continue
 
         if (len(name.strip()) == 0):
             continue
 
-        if (date_str == None):
+        if (type(date_str) != str):
             continue
 
-        birthdate: date
+        birthdate: date | None = None
 
         try:
             birthdate = datetime.strptime(date_str, "%Y-%m-%d").date()
@@ -95,12 +95,16 @@ def main() -> None:
             logger.warning(f"Invalid date type: {ex}")
             continue
 
-        person: Person
+        person: Person | None = None
 
         try:
             person = Person(name=name, birthdate=birthdate)
         except (ValueError, TypeError) as ex:
             logger.warning(f"Failed to create person object: {ex}")
+            continue
+
+        if (type(person) != Person):
+            print("Test")
             continue
 
         guests_from_file.append(person)
