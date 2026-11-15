@@ -40,7 +40,10 @@ class Person(JSONEncoder):
         self._birthdate = birthdate
 
     def to_dict(self) -> dict[str, str]:
-        return {"name": self.name, "birthdate": self.birthdate.isoformat()}
+        return {
+            "name": self.name,
+            "birthdate": self.birthdate.isoformat()
+        }
 
     def default(self, o: Any) -> Any:
         if isinstance(o, date):
