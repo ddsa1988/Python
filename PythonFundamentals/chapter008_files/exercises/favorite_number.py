@@ -26,7 +26,7 @@ def user_to_dict(user: User) -> dict[str, str]:
     }
 
 
-def write_file(path: str, content: str) -> bool:
+def write_text_file(path: str, content: str) -> bool:
     try:
         with open(file=path, mode="w", encoding="utf-8") as file:
             file.write(content)
@@ -91,7 +91,7 @@ def main() -> None:
 
     json_content: str = json.dumps(users_dict, indent=4)
 
-    write_file(file_path, json_content)
+    write_text_file(file_path, json_content)
 
 
 if (__name__ == "__main__"):
