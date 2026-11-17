@@ -2,8 +2,6 @@ import unittest
 
 from models.survey import AnonymousSurvey
 
-# https://realpython.com/python-unittest/
-
 
 class SurveyTesting(unittest.TestCase):
     def setUp(self) -> None:
