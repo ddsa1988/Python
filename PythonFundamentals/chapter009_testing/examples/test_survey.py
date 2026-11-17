@@ -14,8 +14,13 @@ class SurveyTesting(unittest.TestCase):
         """Will be executed after each test method."""
         return super().tearDown()
 
+    # @unittest.skip("Not implemented")
     def test_store_single_response(self) -> None:
-        pass
+        self._survey.store_response(response="English")
+        self._survey.store_response(response="Spanish")
+        self._survey.store_response(response="English")
+
+        print(self._survey.get_responses())
 
 
 if (__name__ == "__main__"):
