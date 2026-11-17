@@ -33,8 +33,11 @@ class AnonymousSurvey:
 
         self._responses.append(response.strip())
 
-    def get_responses(self) -> str:
-        """Show all the responses that have been given."""
+    def get_responses(self) -> list[str]:
+        return self._responses
+
+    def get_responses_formatted(self) -> str:
+        """Get all the responses that have been given."""
 
         # responses_formatted: list[str] = []
         # for response in self._responses:

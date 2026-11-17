@@ -7,20 +7,31 @@ from models.survey import AnonymousSurvey
 
 class SurveyTesting(unittest.TestCase):
     def setUp(self) -> None:
-        """Will be executed before each test method."""
+        """Fixture: Will be executed before each test method."""
         self._survey = AnonymousSurvey("What language did you first learn to speak?")
 
     def tearDown(self) -> None:
-        """Will be executed after each test method."""
-        return super().tearDown()
+        """Fixture: Will be executed after each test method."""
+        del self._survey
 
     # @unittest.skip("Not implemented")
     def test_store_single_response(self) -> None:
-        self._survey.store_response(response="English")
-        self._survey.store_response(response="Spanish")
+        survey_responses: list[str] = self._survey.get_responses()
+
         self._survey.store_response(response="English")
 
-        print(self._survey.get_responses())
+        self.assertIn("English", survey_responses)
+
+    def test_store_three_responses(self) -> None:
+        survey_responses: list[str] = self._survey.get_responses()
+
+        responses_for_test: list[str] = ["English", "Spanish", "Mandarin"]
+
+        for response in responses_for_test:
+            self._survey.store_response(response=response)
+
+        for response in responses_for_test:
+            self.assertIn(response, survey_responses)
 
 
 if (__name__ == "__main__"):
