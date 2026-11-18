@@ -1,7 +1,10 @@
+import functools
 from collections.abc import Callable
 
 
 def decorator(func: Callable[[], None]) -> Callable[[], None]:
+
+    @functools.wraps(func)
     def wrapper():
         print("Something is happening before the function is called.")
         func()
