@@ -1,5 +1,13 @@
+from decorators import do_twice
+
+
+@do_twice
+def greet(name: str) -> None:
+    print("Hello, " + name.strip().title() + ".")
+
+
 def main() -> None:
-    pass
+    greet("diego")
 
 
 if (__name__ == "__main__"):

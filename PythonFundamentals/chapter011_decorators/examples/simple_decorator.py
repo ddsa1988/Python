@@ -20,7 +20,7 @@ def say_good_morning() -> None:
 
 
 def main() -> None:
-    good_night = decorator(say_good_night)
+    good_night: Callable[[], None] = decorator(say_good_night)
     good_night()
 
     print()

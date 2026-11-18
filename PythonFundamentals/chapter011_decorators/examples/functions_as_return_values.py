@@ -1,4 +1,9 @@
+from collections.abc import Callable
+
+# Callable[[argument_types], return_type]
+
 # https://realpython.com/primer-on-python-decorators/
+
 
 def parent(num: int):
     def first_child(name: str) -> str:
@@ -14,7 +19,7 @@ def parent(num: int):
 
 
 def main() -> None:
-    first = parent(1)
+    first: Callable[[str], str] = parent(1)
     print(first("diego"))
 
     second = parent(2)
